@@ -12,9 +12,14 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/backend/src/server.js"
-    }
+    { "source": "/contacts", "destination": "/backend/src/server.js" },
+    { "source": "/contacts/(.*)", "destination": "/backend/src/server.js" },
+    { "source": "/rag", "destination": "/backend/src/server.js" },
+    { "source": "/rag/(.*)", "destination": "/backend/src/server.js" },
+    { "source": "/calls", "destination": "/backend/src/server.js" },
+    { "source": "/calls/(.*)", "destination": "/backend/src/server.js" },
+    { "source": "/webhooks/(.*)", "destination": "/backend/src/server.js" },
+    { "source": "/health", "destination": "/backend/src/server.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
