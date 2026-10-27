@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "buildCommand": "npm --prefix web install && npm --prefix web run build",
+  "installCommand": "npm --prefix backend install && npm --prefix web install",
+  "buildCommand": "npm --prefix web run build",
   "outputDirectory": "web/dist",
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/contacts", "destination": "/api" },
+    { "source": "/contacts/(.*)", "destination": "/api" },
+    { "source": "/rag", "destination": "/api" },
+    { "source": "/rag/(.*)", "destination": "/api" },
+    { "source": "/calls", "destination": "/api" },
+    { "source": "/calls/(.*)", "destination": "/api" },
+    { "source": "/health", "destination": "/api" },
+    { "source": "/webhooks/(.*)", "destination": "/api" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
